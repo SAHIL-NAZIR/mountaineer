@@ -7,14 +7,15 @@ body {
     grid-template-columns: repeat(12, 1fr);
     column-gap: 32px;
 }
+
 header {
     position: absolute;
     width: 100%;
-    @include flex-r-c;
+    @include flex($direction: row, $align: center);
     justify-content: space-between;
     padding: 64px 80px 0 80px;
     .logo {
-        font-family: 'Chronicle Display', sans-serif;
+        font-family: $chronicles;
         font-size: 32px;
         line-height: 38px;
         letter-spacing: 0.01em;
@@ -24,13 +25,13 @@ header {
 
     .nav {
         &__lists {
-            @include flex-r-c;
+            @include flex($direction: row, $align: center);
         }
         &__list{
             list-style-type: none;
         }
         &__link {
-            font-family: 'gilroy-bold';
+            font-family: $gilroy;
             font-size: 18px;
             line-height: 22px;
             color: $light-color;
@@ -43,8 +44,8 @@ header {
     .account {
         a {
             color: $light-color;
-            @include flex-r-c;
-            font-family: 'Gilroy-bold', sans-serif;
+            @include flex($direction: row, $align: center);
+            font-family: $gilroy;
             font-size: 17px;
             text-decoration: none;
 
@@ -62,33 +63,34 @@ header {
     background-size: cover;
     height: 140vh;
     grid-column: 1/13;
-    @include flex-c-c;
+    @include flex($direction: column, $align: center);
 
     &__div {
-        margin-top: 13%;
+        margin-top: 15%;
+        margin-left: 0%;
         width: 55%;
 
         .tag {
-            @include flex-r-c;
+            @include flex($direction: row, $align: center);
             width: 315px;
             height: 22px;
             justify-content: space-between;
             margin-bottom: 32px;
         }
         .span {
-            font-family: 'Gilroy-bold', sans-serif;
+            font-family: $gilroy;
             font-style: normal;
             font-weight: 800;
             font-size: 18px;
             line-height: 22px;
-            letter-spacing: 6px;
-            text-transform: capitalize;
+            letter-spacing: 4px;
+            text-transform: uppercase;
             color: $secondary-color;
             margin-left: 30px;
         }
     
         h2 {
-            font-family: "Chronicle Display", sans-serif;
+            font-family: $chronicles;
             font-style: normal;
             font-weight: 300;
             font-size: 88px;
@@ -99,14 +101,14 @@ header {
         }
     
         a {
-            font-family: 'Gilroy-bold', sans-serif;
+            font-family: $gilroy;
             font-style: normal;
             font-weight: bold;
             font-size: 18px;
             line-height: 22px;
             color: $light-color;
             text-decoration: none;
-            @include flex-r-c;
+            @include flex($direction: row, $align: center);
             margin-top: 30px;
 
             img {
@@ -114,19 +116,35 @@ header {
             }
         }
     }
+}
 
-    .test {
-        position: relative;
-        bottom: -340px;
-        width: 100%;
-        height: 700px;
+.social {
+    @include absolute($t: 60%, $l: 1%);
+    height: 24px;
+    width: 173px;
+    transform: rotate(90deg);
+    @include flex($direction: row, $align: center);
+    justify-content: space-between;
+    text-align: center;
+
+    h3 {
+        font-family: $gilroy;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 18px;
+        line-height: 22px;
+        letter-spacing: 2px;
+        color: $light-color;
+    }
+
+    a {
+        // margin-left: 15px;
+        svg {
+            transform: rotate(-90deg);
+        }
     }
 }
 
 .contents, footer{
     grid-column: 2/12;
-}
-
-aside {
-    @include display;
 }

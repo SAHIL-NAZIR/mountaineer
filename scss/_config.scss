@@ -1,6 +1,8 @@
 $primary-color: #0B1D26;
 $secondary-color: #FBD784;
 $light-color: #ffffff;
+$chronicles: 'Chronicle Display', sans-serif;
+$gilroy: 'Gilroy-bold', sans-serif;
 
 * {
     margin: 0;
@@ -8,20 +10,14 @@ $light-color: #ffffff;
     box-sizing: border-box;
 }
 
-@mixin flex-r-c {
+@mixin flex($direction: row, $align: stretch) {
     display: flex;
-    flex-direction: row;
-    align-items: center;
+    flex-direction: $direction;
+    align-items: $align;
 }
 
-@mixin flex-c-c {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-
-
-@mixin display {
-    display: none;
+@mixin absolute($t, $l) {
+    position: absolute;
+    top: $t;
+    left: $l;
 }

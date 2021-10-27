@@ -37,7 +37,7 @@ header {
 }
 
 header .logo {
-  font-family: 'Chronicle Display', sans-serif;
+  font-family: "Chronicle Display", sans-serif;
   font-size: 32px;
   line-height: 38px;
   letter-spacing: 0.01em;
@@ -63,7 +63,7 @@ header .nav__list {
 }
 
 header .nav__link {
-  font-family: 'gilroy-bold';
+  font-family: "Gilroy-bold", sans-serif;
   font-size: 18px;
   line-height: 22px;
   color: #ffffff;
@@ -84,7 +84,7 @@ header .account a {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  font-family: 'Gilroy-bold', sans-serif;
+  font-family: "Gilroy-bold", sans-serif;
   font-size: 17px;
   text-decoration: none;
 }
@@ -114,7 +114,8 @@ header .account a svg {
 }
 
 .main__div {
-  margin-top: 13%;
+  margin-top: 15%;
+  margin-left: 0%;
   width: 55%;
 }
 
@@ -138,13 +139,13 @@ header .account a svg {
 }
 
 .main__div .span {
-  font-family: 'Gilroy-bold', sans-serif;
+  font-family: "Gilroy-bold", sans-serif;
   font-style: normal;
   font-weight: 800;
   font-size: 18px;
   line-height: 22px;
-  letter-spacing: 6px;
-  text-transform: capitalize;
+  letter-spacing: 4px;
+  text-transform: uppercase;
   color: #FBD784;
   margin-left: 30px;
 }
@@ -161,7 +162,7 @@ header .account a svg {
 }
 
 .main__div a {
-  font-family: 'Gilroy-bold', sans-serif;
+  font-family: "Gilroy-bold", sans-serif;
   font-style: normal;
   font-weight: bold;
   font-size: 18px;
@@ -185,20 +186,48 @@ header .account a svg {
   margin-left: 12px;
 }
 
-.main .test {
-  position: relative;
-  bottom: -340px;
-  width: 100%;
-  height: 700px;
+.social {
+  position: absolute;
+  top: 60%;
+  left: 1%;
+  height: 24px;
+  width: 173px;
+  -webkit-transform: rotate(90deg);
+          transform: rotate(90deg);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  text-align: center;
+}
+
+.social h3 {
+  font-family: "Gilroy-bold", sans-serif;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 22px;
+  letter-spacing: 2px;
+  color: #ffffff;
+}
+
+.social a svg {
+  -webkit-transform: rotate(-90deg);
+          transform: rotate(-90deg);
 }
 
 .contents, footer {
   -ms-grid-column: 2;
   -ms-grid-column-span: 10;
   grid-column: 2/12;
-}
-
-aside {
-  display: none;
 }
 /*# sourceMappingURL=main.css.map */
