@@ -225,7 +225,84 @@ header .account a svg {
           transform: rotate(-90deg);
 }
 
-.contents, footer {
+.contents {
+  -ms-grid-column: 2;
+  -ms-grid-column-span: 10;
+  grid-column: 2/12;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch;
+  position: relative;
+  top: -15%;
+  margin-bottom: 12%;
+}
+
+.contents__back-text {
+  position: absolute;
+  top: -15%;
+  left: 0;
+  font-family: "Gilroy-bold", sans-serif;
+  font-size: 240px;
+  font-style: normal;
+  color: #ffffff;
+  opacity: 0.1;
+}
+
+.contents__bar {
+  min-width: 72px;
+  height: 2px;
+  background: #FBD784;
+}
+
+.contents__span {
+  font-family: "Gilroy-bold", sans-serif;
+  font-style: normal;
+  font-weight: 800;
+  font-size: 18px;
+  line-height: 22px;
+  letter-spacing: 6px;
+  text-transform: uppercase;
+  color: #FBD784;
+}
+
+.contents h2 {
+  font-family: "Chronicle Display", sans-serif;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 64px;
+  line-height: 77px;
+  color: #ffffff;
+}
+
+.contents p {
+  font-family: "Gilroy-bold", sans-serif;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 32px;
+  color: #ffffff;
+}
+
+.contents a {
+  font-family: "Gilroy-bold", sans-serif;
+  font-size: 18px;
+  line-height: 22px;
+  color: #FBD784;
+  text-decoration: none;
+}
+
+.scrollbar {
+  position: absolute;
+}
+
+.footer {
   -ms-grid-column: 2;
   -ms-grid-column-span: 10;
   grid-column: 2/12;

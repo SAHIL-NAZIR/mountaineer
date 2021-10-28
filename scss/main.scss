@@ -145,6 +145,74 @@ header {
     }
 }
 
-.contents, footer{
+.contents {
+    grid-column: 2/12;
+    @include flex;
+    position: relative;
+    top: -15%;
+    margin-bottom: 12%;
+
+    &__back-text {
+        position: absolute;
+        top: -15%;
+        left: 0;
+        font-family: $gilroy;
+        font-size: 240px;
+        font-style: normal;
+        color: $light-color;
+        opacity: 0.1;
+    }
+
+    &__bar {
+        min-width: 72px;
+        height: 2px;
+        background: $secondary-color;
+    }
+    
+    &__span {
+        font-family: $gilroy;
+        font-style: normal;
+        font-weight: 800;
+        font-size: 18px;
+        line-height: 22px;
+        letter-spacing: 6px;
+        text-transform: uppercase;
+        color: $secondary-color;
+    }
+
+
+    h2 {
+        font-family: $chronicles;
+        font-style: normal;
+        font-weight: 600;
+        font-size: 64px;
+        line-height: 77px;
+        color: $light-color;
+    }
+
+    p {
+        font-family: $gilroy;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 18px;
+        line-height: 32px;
+        color: $light-color;
+    }
+
+    a {
+        font-family: $gilroy;
+        font-size: 18px;
+        line-height: 22px;
+        color: $secondary-color;
+        text-decoration: none;
+    }
+
+    img {
+    }
+}
+.scrollbar {
+    position: absolute;
+}
+.footer{
     grid-column: 2/12;
 }
