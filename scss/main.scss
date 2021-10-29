@@ -262,4 +262,88 @@ header {
 
 .footer{
     grid-column: 2/12;
+    position: relative;
+    
+    &__logo {
+        width: fit-content;
+        cursor: pointer;
+        font-family: $chronicles;
+        font-size: 32px;
+        line-height: 38px;
+        text-transform: capitalize;
+        color: $light-color;
+        margin-bottom: 24px;
+
+        &:hover {
+            color: $secondary-color;
+        }
+    }
+
+    &__text {
+        width: 303px;
+        height: 64px;
+        font-family: $gilroy;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 18px;
+        line-height: 32px;
+        color: $light-color;
+        margin-bottom: 125px;
+    }
+
+    div {
+        @include flex($direction: column);
+
+        h2 {
+            font-family: $gilroy;
+            font-style: normal;
+            font-weight: bold;
+            font-size: 24px;
+            line-height: 32px;
+            color: $secondary-color;
+            margin-bottom: 24px;
+        }
+
+        a {
+            width: fit-content;
+            font-family: $gilroy;
+            font-style: normal;
+            font-weight: 500;
+            font-size: 18px;
+            line-height: 32px;
+            color: $light-color;
+            text-decoration: none;
+            margin-bottom: 16px;
+        }
+        a:hover{
+            color: $secondary-color;
+            font-weight: bold;
+        }
+    }
+
+    &__links-1{
+        position: absolute;
+        // width: 193px;
+        // height: 280px;
+        right: 375px;
+        top: 0px;
+    }
+
+    &__links-2 {
+        position: absolute;
+        // width: 161px;
+        // height: 184px;
+        right: 0;
+        top: 0px;
+    }
+
+    &__copyright {
+        font-family: $gilroy;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 18px;
+        line-height: 32px;
+        color: $light-color;
+        opacity: 0.5;
+    }
 }
