@@ -40,12 +40,17 @@ header {
 }
 
 header .logo {
+  cursor: pointer;
   font-family: "Chronicle Display", sans-serif;
   font-size: 32px;
   line-height: 38px;
   letter-spacing: 0.01em;
   text-transform: capitalize;
   color: #ffffff;
+}
+
+header .logo:hover {
+  color: #FBD784;
 }
 
 header .nav__lists {
@@ -76,6 +81,10 @@ header .nav__link {
   text-decoration: none;
   letter-spacing: 2px;
   margin: 0 20px;
+}
+
+header .nav__link:hover {
+  color: #FBD784;
 }
 
 header .account a {
@@ -246,6 +255,10 @@ header .account a svg {
   margin-left: 12px;
 }
 
+.main__div a:hover {
+  font-size: 19px;
+}
+
 .scrollbar {
   position: absolute;
 }
@@ -395,6 +408,10 @@ header .account a svg {
   line-height: 22px;
   color: #FBD784;
   text-decoration: none;
+}
+
+.contents a:hover {
+  margin-left: 5px;
 }
 
 .contents img {
