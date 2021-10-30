@@ -1,6 +1,7 @@
 @import 'config';
-@import url('http://fonts.cdnfonts.com/css/gilroy-bold');
-@import url('http://fonts.cdnfonts.com/css/chronicle-display');
+@import 'responsive';
+// @import url('http://fonts.cdnfonts.com/css/gilroy-bold');
+// @import url('http://fonts.cdnfonts.com/css/chronicle-display');
 body {
     background: $primary-color;
     display: grid;
@@ -363,3 +364,9 @@ header {
         opacity: 0.5;
     }
 }
+
+@include laptop-l;
+@include laptop-m;
+@include laptop;
+@include tablet;
+@include mobile;

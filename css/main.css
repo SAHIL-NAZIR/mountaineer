@@ -1,5 +1,3 @@
-@import url("http://fonts.cdnfonts.com/css/gilroy-bold");
-@import url("http://fonts.cdnfonts.com/css/chronicle-display");
 * {
   margin: 0;
   padding: 0;
@@ -228,6 +226,9 @@ header .account a svg {
 }
 
 .main__div a {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
   font-family: "Gilroy-bold", sans-serif;
   font-style: normal;
   font-weight: bold;
@@ -543,5 +544,235 @@ header .account a svg {
   line-height: 32px;
   color: #ffffff;
   opacity: 0.5;
+}
+
+@media (max-width: 1500px) {
+  .contents {
+    padding-left: 0;
+  }
+  .contents__back-text {
+    left: -10%;
+    top: -17%;
+  }
+  .contents h2, .contents p {
+    width: 80%;
+    height: auto;
+  }
+  .contents img {
+    width: 80%;
+    height: auto;
+  }
+  #contents-rev {
+    width: 100%;
+    left: 10%;
+  }
+  #contents-rev > div {
+    margin-left: 10%;
+  }
+  #contents-rev h1 {
+    left: 42%;
+  }
+}
+
+@media (max-width: 1200px) {
+  .main__div {
+    margin-top: 22%;
+    margin-left: 2%;
+  }
+  .main h2 {
+    font-size: 64px;
+  }
+  .main .tag {
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+  }
+  .main span {
+    font-size: 14px;
+  }
+  .contents, #contents-rev {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: stretch;
+        -ms-flex-align: stretch;
+            align-items: stretch;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    left: 0;
+  }
+  .contents h1, #contents-rev h1 {
+    top: -8%;
+    left: -10%;
+  }
+  .contents > div, #contents-rev > div {
+    margin-bottom: 10%;
+    margin-left: 0;
+  }
+  .contents > div div, #contents-rev > div div {
+    margin-bottom: 20px;
+    margin-left: 5%;
+  }
+  .contents img, #contents-rev img {
+    margin-top: 0;
+    margin-left: 0;
+  }
+  .contents a, #contents-rev a {
+    position: relative;
+    left: 60%;
+  }
+  .contents h2, #contents-rev h2 {
+    font-size: 50px;
+    margin-bottom: 24px;
+    line-height: 50px;
+  }
+  .footer {
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 12;
+    grid-column: 1/13;
+  }
+  .footer__logo, .footer__text, .footer__copyright {
+    margin-left: 5%;
+  }
+  .footer div {
+    width: 25%;
+  }
+  .footer div h2 {
+    font-size: 150%;
+  }
+  .footer__links-1 {
+    right: 25%;
+  }
+  .footer__links-2 {
+    right: 1%;
+  }
+}
+
+@media (max-width: 1000px) {
+  header div.account a {
+    font-size: 1em;
+  }
+  main div div span {
+    font-size: 14px;
+  }
+  main div h2.main__text {
+    font-size: 50px;
+    line-height: 70px;
+  }
+}
+
+@media (max-width: 800px) {
+  header .logo {
+    font-size: 28px;
+  }
+  header .nav ul {
+    display: none;
+  }
+  header .account {
+    font-size: 15px;
+    height: 25px;
+  }
+  header .account a svg {
+    height: 35px;
+    width: 35px;
+  }
+  .social h3 {
+    font-size: 16px;
+    letter-spacing: 1px;
+  }
+  .main .span {
+    font-size: 16px;
+  }
+  .main div h2.main__text {
+    font-size: 40px;
+    line-height: 50px;
+  }
+  .contents h1 {
+    font-size: 190px;
+  }
+  .contents__title {
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+  }
+  .contents__bar {
+    min-width: 50px;
+    margin-right: 25px;
+  }
+  .contents span {
+    font-size: 15px;
+  }
+  .contents img {
+    height: 100%;
+    width: 60%;
+  }
+  .footer {
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: end;
+        -ms-flex-align: end;
+            align-items: flex-end;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    margin-top: -150px;
+    padding: 0;
+  }
+  .footer h1 {
+    position: absolute;
+    left: 90px;
+  }
+  .footer p {
+    margin-bottom: 10px;
+    margin-right: 80px;
+  }
+  .footer div {
+    display: none;
+  }
+  .footer span {
+    position: absolute;
+    right: 30px;
+    bottom: -40px;
+  }
+}
+
+@media (max-width: 600px) {
+  header {
+    padding: 50px 60px 0;
+  }
+  header .account a h2 {
+    display: none;
+  }
+  .social {
+    display: none;
+  }
+  .main__div {
+    width: 80%;
+    margin: 35% 0 0;
+  }
+  .footer {
+    padding: 0;
+  }
+  .footer h1, .footer p {
+    display: none;
+  }
+  .footer span {
+    width: 70%;
+    position: relative;
+    right: 15%;
+  }
 }
 /*# sourceMappingURL=main.css.map */

@@ -1,0 +1,231 @@
+@mixin laptop-l {
+    @media (max-width: 1500px) {
+        .contents {
+            padding-left: 0;
+            &__back-text {
+                left: -10%;
+                top: -17%;
+            }
+            h2, p{
+                width: 80%;
+                height: auto;
+            }
+            img {
+                width: 80%;
+                height: auto;
+            }
+        }
+        #contents-rev {
+            width: 100%;
+            left: 10%;
+            > div{
+                margin-left: 10%;
+            }
+            h1 {
+                left: 42%;
+            }
+        }
+    }
+}
+
+@mixin laptop-m {
+    @media (max-width: 1200px) {
+        .main {
+            &__div {
+                margin-top: 22%;
+                margin-left: 2%;
+            }
+            h2 {
+                font-size: 64px;
+            }
+            .tag {
+                width: fit-content;
+            }
+            span {
+                font-size: 14px;
+            }
+        }
+        .contents, #contents-rev {
+            @include flex($direction: column);
+            left: 0;
+            
+            h1 {
+                top: -8%;
+                left: -10%;
+            }
+            > div {
+                margin-bottom: 10%;
+                margin-left: 0;
+                div {
+                    margin-bottom: 20px;
+                    margin-left: 5%;
+                }
+            }
+            img {
+                margin-top: 0;
+                margin-left: 0;
+            }
+            a {
+                position: relative;
+                left: 60%;
+            }
+            h2 {
+                font-size: 50px;
+                margin-bottom: 24px;
+                line-height: 50px;
+            }
+        }
+        .footer {
+            grid-column: 1/13;
+            &__logo, &__text, &__copyright {
+                margin-left: 5%;
+            }
+
+            div {
+                width: 25%;
+                h2 {
+                    font-size: 150%;
+                }                
+            }
+            &__links-1{
+                right: 25%;
+            }
+            &__links-2 {
+                right: 1%;
+            }
+        }
+    }
+}
+
+@mixin laptop {
+    @media (max-width: 1000px) {
+        header {
+            div.account a {
+                font-size: 1em;
+            }
+        }
+        main {
+            div {
+                div {
+                    span {
+                        font-size: 14px;
+                    }
+                }
+                h2.main__text {
+                    font-size: 50px;
+                    line-height: 70px;
+                }
+            }
+        }
+    }
+}
+@mixin tablet {
+    @media (max-width: 800px) {
+        header{
+            .logo {
+                font-size: 28px;
+            }
+            .nav ul {
+                display: none;
+            }
+            .account {
+                font-size: 15px;
+                height: 25px;
+                a svg {
+                    height: 35px;
+                    width: 35px;
+                }
+            }
+        }
+        .social h3{
+            font-size: 16px;
+            letter-spacing: 1px;
+        }
+        .main{
+            .span{
+                font-size: 16px;
+            }
+            div {
+                h2.main__text {
+                    font-size: 40px;
+                    line-height: 50px;
+                }
+            }
+        }
+        .contents{
+            h1{
+                font-size: 190px;
+            }
+            &__title{
+                width: fit-content;
+            }
+            &__bar{
+                min-width: 50px;
+                margin-right: 25px;
+            }
+            span{
+                font-size: 15px;
+            }
+            img{
+                height: 100%;
+                width: 60%;
+            }
+        }
+        .footer{
+            height: fit-content;
+            @include flex(column, flex-end, center);
+            margin-top: -150px;
+            padding: 0;
+            h1{
+                position: absolute;
+                left: 90px;
+            }
+            p {
+                margin-bottom: 10px;
+                margin-right: 80px;
+            }
+           div{
+               display: none;
+            }
+            span{
+                position: absolute;
+                right: 30px;
+                bottom: -40px;
+            }
+        }
+    }
+}
+@mixin mobile {
+    @media (max-width: 600px) {
+        header {
+            padding: 50px 60px 0;
+            .account{
+                a h2{
+                    display: none;
+                }
+            }
+        }
+        .social{
+            display: none;
+        }
+        .main{
+            &__div {
+                width: 80%;
+                margin: 35% 0 0;
+            }
+        }
+        .footer{
+            padding: 0;
+            // margin: 0 0 -200px 0;
+            h1, p{
+                display: none;
+            }
+            span{
+                width: 70%;
+                position: relative;
+                right: 15%;
+
+            }
+        }
+    }
+}
